@@ -13,6 +13,11 @@ describe "each" do
 end
 
 describe "select" do
+  it "filters the collection based on a boolean expression" do
+    ruby_filtered_array = [1,2,3,4,5].select { |i| i >= 3 }
+    my_filtered_array   = my_array.select { |i| i >= 3 }
+    expect(my_filtered_array.to_a).to eq(ruby_filtered_array)
+  end
 end
 
 describe "map" do
