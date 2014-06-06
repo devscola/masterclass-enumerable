@@ -23,8 +23,8 @@ module MyEnumerable
     result
   end
 
-  def inject
-    result = 0
+  def inject initial_value=0
+    result = initial_value
     for element in enumerable
       result = yield(result, element)
     end
