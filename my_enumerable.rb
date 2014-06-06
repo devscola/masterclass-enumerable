@@ -8,6 +8,11 @@ module MyEnumerable
   end
 
   def select
+    result = []
+    for element in enumerable
+      result << element if (yield element)
+    end
+    result
   end
 
   def map
