@@ -34,4 +34,9 @@ describe "inject" do
     my_result   = my_array.inject { |sum, i| sum + i }
     expect(my_result).to be(ruby_result)
   end
+  it "uses an initial value to reduce the elements in the collection" do
+    ruby_result = [1,2,3,4,5].inject(100) { |sum, i| sum + i }
+    my_result   = my_array.inject(100) { |sum, i| sum + i }
+    expect(my_result).to be(ruby_result)
+  end
 end
