@@ -16,6 +16,11 @@ module MyEnumerable
   end
 
   def map
+    result = []
+    for element in enumerable
+      result << (yield element)
+    end
+    result
   end
 
   def inject
