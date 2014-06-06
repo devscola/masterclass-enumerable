@@ -29,4 +29,9 @@ describe "map" do
 end
 
 describe "inject" do
+  it "reduces the elements in the collection to a single value" do
+    ruby_result = [1,2,3,4,5].inject { |sum, i| sum + i }
+    my_result   = my_array.inject { |sum, i| sum + i }
+    expect(my_result).to be(ruby_result)
+  end
 end
