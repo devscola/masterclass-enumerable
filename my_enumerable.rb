@@ -1,9 +1,9 @@
 module MyEnumerable
   # enumerable is a private method in the class where the module is included
 
-  def each
+  def each &the_block
     for element in enumerable
-      yield element
+      the_block.call(element)
     end
   end
 
