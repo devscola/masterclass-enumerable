@@ -24,5 +24,10 @@ module MyEnumerable
   end
 
   def inject
+    result = 0
+    for element in enumerable
+      result = yield(result, element)
+    end
+    result
   end
 end
