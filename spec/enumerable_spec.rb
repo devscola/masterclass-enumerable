@@ -21,6 +21,11 @@ describe "select" do
 end
 
 describe "map" do
+  it "transforms the elements in the collection" do
+    ruby_transformed_array = [1,2,3,4,5].map { |i| i * i }
+    my_transformed_array   = my_array.map { |i| i * i }
+    expect(my_transformed_array.to_a).to eq(ruby_transformed_array)
+  end
 end
 
 describe "inject" do
